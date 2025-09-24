@@ -3,202 +3,59 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Philo Wang — Personal Website</title>
-  <meta name="description" content="Philo Wang — Researcher & Builder. Educational games, AI agents, HCI." />
-
-  <!-- Open Graph / Twitter -->
-  <meta property="og:title" content="Philo Wang — Personal Website" />
-  <meta property="og:description" content="Researcher & Builder. Educational games, AI agents, HCI." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/preview.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
+  <title>Philo's Game Room</title>
   <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" href="assets/favicon.png">
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-
-  <header class="site-header">
-    <div class="container">
-      <a class="brand" href="#"><span class="logo-dot" aria-hidden="true"></span> Philo Wang</a>
-      <nav class="nav" aria-label="Primary">
-        <button class="nav__toggle" aria-expanded="false" aria-controls="navMenu">Menu</button>
-        <ul id="navMenu" class="nav__list">
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#writing">Writing</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
+  <!-- HUD-style header -->
+  <header class="hud">
+    <h1>🎮 PhiloJiaqiWang</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Quests</a></li>
+        <li><a href="#contact">Save Game</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <main id="main">
-    <!-- Hero -->
-    <section class="hero container">
-      <div class="hero__text">
-        <h1 class="hero__title">
-          Hi, I’m <span class="accent">Philo</span> — I design learning experiences and build AI-driven games.
-        </h1>
-        <p class="hero__subtitle">
-          PhD @ UIUC • Educational Games • HCI • AI Agents • Museum UX
-        </p>
-        <div class="hero__cta">
-          <a class="btn btn--primary" href="#projects">See Projects</a>
-          <a class="btn" href="assets/Philo_Wang_Resume.pdf">Download Résumé</a>
-        </div>
-        <ul class="social">
-          <li><a href="https://github.com/yourusername" aria-label="GitHub">GitHub</a></li>
-          <li><a href="https://www.linkedin.com/in/yourusername" aria-label="LinkedIn">LinkedIn</a></li>
-          <li><a href="mailto:you@example.com" aria-label="Email">Email</a></li>
-        </ul>
-      </div>
-      <div class="hero__media" aria-hidden="true">
-        <img src="assets/profile.jpg" alt="" class="avatar">
-      </div>
-    </section>
+  <!-- Hero with blinking cursor -->
+  <section class="hero">
+    <h2 class="typewriter">> Welcome to my world...</h2>
+    <p>Press Start to explore my portfolio!</p>
+    <button class="start-btn" onclick="startGame()">▶ Start</button>
+  </section>
 
-    <!-- About -->
-    <section id="about" class="section container">
-      <h2 class="section__title">About</h2>
-      <div class="cols">
-        <p>
-          I’m a researcher and builder exploring how <strong>games</strong> can cultivate
-          <strong>critical thinking</strong> and <strong>independent learning</strong>. My work blends
-          <em>human-computer interaction</em>, <em>AI agents</em>, and <em>playful learning</em>—from web-based escape rooms
-          to museum guide apps and XR experiments.
-        </p>
-        <ul class="checklist">
-          <li>Designing LLM-powered agents for believable behavior</li>
-          <li>Log analysis + learning assessment pipelines</li>
-          <li>Inclusive UX for diverse digital fluency</li>
-        </ul>
-      </div>
-    </section>
+  <!-- About section -->
+  <section id="about" class="panel hidden">
+    <h2>Level 1: About Me</h2>
+    <p>I’m Philo — a researcher and game maker combining <strong>AI</strong>, <strong>HCI</strong>, and <strong>education</strong>.</p>
+  </section>
 
-    <!-- Projects -->
-    <section id="projects" class="section container">
-      <h2 class="section__title">Selected Projects</h2>
-      <div class="grid cards">
-        <article class="card">
-          <div class="card__body">
-            <h3 class="card__title"><a href="#">Unveil — Misinformation Game</a></h3>
-            <p class="card__meta">Web • p5.js • Node • MySQL</p>
-            <p>Story-based mystery game teaching skepticism and source vetting; analytics on player behavior & learning gains.</p>
-          </div>
-          <div class="card__footer">
-            <a class="tag" href="#">paper</a>
-            <a class="tag" href="#">code</a>
-            <a class="tag" href="#">demo</a>
-          </div>
-        </article>
+  <!-- Projects -->
+  <section id="projects" class="panel hidden">
+    <h2>Level 2: Quests</h2>
+    <ul class="quest-list">
+      <li>🗝️ <span>Unveil – Escape misinformation dungeon</span></li>
+      <li>💬 <span>DRBot – Chatbot with healing powers</span></li>
+      <li>🏛️ <span>Museum iPad Guide – Treasure hunt edition</span></li>
+    </ul>
+  </section>
 
-        <article class="card">
-          <div class="card__body">
-            <h3 class="card__title"><a href="#">DRBot — CBT+MI Chatbot</a></h3>
-            <p class="card__meta">Healthcare • Llama • HIPAA</p>
-            <p>Conversational agent supporting behavioral activation through motivational interviewing for PwMS.</p>
-          </div>
-          <div class="card__footer">
-            <a class="tag" href="#">overview</a>
-            <a class="tag" href="#">docs</a>
-          </div>
-        </article>
+  <!-- Contact -->
+  <section id="contact" class="panel hidden">
+    <h2>Final Level: Save Your Progress</h2>
+    <form action="https://formspree.io/f/your-id" method="POST">
+      <label>Email <input type="email" name="email" required></label>
+      <label>Message <textarea name="message" rows="4" required></textarea></label>
+      <button class="submit-btn">💾 Save</button>
+    </form>
+  </section>
 
-        <article class="card">
-          <div class="card__body">
-            <h3 class="card__title"><a href="#">Museum iPad Guide</a></h3>
-            <p class="card__meta">HCI • IR • iOS</p>
-            <p>Interactive guide with “memorable postcards” from device logs; treasure-hunt mechanics for engagement.</p>
-          </div>
-          <div class="card__footer">
-            <a class="tag" href="#">case study</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- Experience -->
-    <section id="experience" class="section container">
-      <h2 class="section__title">Experience</h2>
-      <ol class="timeline" aria-label="Work and education timeline">
-        <li class="timeline__item">
-          <div class="timeline__dot" aria-hidden="true"></div>
-          <div class="timeline__content">
-            <h3>University of Illinois Urbana-Champaign — PhD</h3>
-            <p class="muted">2024 — Present • Information Science</p>
-            <p>Research on educational games, AI-driven agents, and assessment.</p>
-          </div>
-        </li>
-        <li class="timeline__item">
-          <div class="timeline__dot" aria-hidden="true"></div>
-          <div class="timeline__content">
-            <h3>Champaign County History Museum — Volunteer</h3>
-            <p class="muted">2024 — Present</p>
-            <p>Interaction design for exhibits; local history research.</p>
-          </div>
-        </li>
-      </ol>
-    </section>
-
-    <!-- Writing -->
-    <section id="writing" class="section container">
-      <h2 class="section__title">Writing</h2>
-      <ul class="list">
-        <li>
-          <a href="#">I Have Seen It Before: A Review and Evaluation of Déjà Vu Theories</a>
-          <span class="muted">— 2025</span>
-        </li>
-        <li>
-          <a href="#">Escape Education: Designing for Skepticism in Story Games</a>
-          <span class="muted">— 2025</span>
-        </li>
-      </ul>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="section container">
-      <h2 class="section__title">Contact</h2>
-      <div class="cols">
-        <p>Want to collaborate or just say hi? Reach me via email or the form.</p>
-        <form class="form" action="https://formspree.io/f/your-id" method="POST">
-          <label>
-            <span class="label">Your email</span>
-            <input name="email" type="email" required placeholder="you@example.com" />
-          </label>
-          <label>
-            <span class="label">Message</span>
-            <textarea name="message" rows="5" required placeholder="Hello!"></textarea>
-          </label>
-          <button class="btn btn--primary" type="submit">Send</button>
-          <p class="muted text-sm">Or email me at <a href="mailto:you@example.com">you@example.com</a></p>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer__inner">
-      <p class="muted text-sm">© <span id="year"></span> Philo Wang. All rights reserved.</p>
-      <a class="top" href="#top" aria-label="Back to top">↑ Top</a>
-    </div>
+  <footer class="hud">
+    <p>© <span id="year"></span> PhiloJiaqiWang — Powered by GitHub Pages</p>
   </footer>
 
-  <script>
-    // tiny progressive enhancement: current year + accessible nav toggle
-    document.getElementById('year').textContent = new Date().getFullYear();
-    const btn = document.querySelector('.nav__toggle');
-    const list = document.getElementById('navMenu');
-    btn.addEventListener('click', () => {
-      const open = btn.getAttribute('aria-expanded') === 'true';
-      btn.setAttribute('aria-expanded', String(!open));
-      list.classList.toggle('nav__list--open');
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
