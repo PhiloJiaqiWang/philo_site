@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Philo — Portfolio</title>
+  <title>Philo</title>
   <meta name="description" content="Portfolio website with projects, publications, news, and contact." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -112,14 +112,6 @@
     .news { margin-bottom: 1rem }
     .news time { font-weight: 600 }
 
-    /* Contact */
-    form { display:grid; gap:.7rem; max-width: 700px }
-    input, textarea { width:100%; padding:.7rem .8rem; background: var(--bg); color: var(--text); border:1px solid var(--border); border-radius:.6rem }
-    textarea { min-height: 120px; resize: vertical }
-    .btn { background: var(--brand); color:#fff; border:none; padding:.65rem .9rem; border-radius:.6rem; cursor:pointer; font-weight:600 }
-    .btn:disabled { opacity: .6; cursor: not-allowed }
-
-    footer { padding: 2.2rem 0 3rem; color: var(--muted); text-align:center }
 
     /* Social */
       .socials { 
@@ -349,17 +341,7 @@
       });
     }));
 
-    // Contact form (opens mail client)
-    const form = document.getElementById('contactForm');
-    const msg = document.getElementById('formMsg');
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const data = Object.fromEntries(new FormData(form).entries());
-      const subject = encodeURIComponent('Website contact from ' + data.name);
-      const body = encodeURIComponent(data.message + '\n\n— ' + data.name + ' (' + data.email + ')');
-      window.location.href = `mailto:jiaqi17@illinois.com?subject=${subject}&body=${body}`;
-      msg.textContent = 'Opening your email app…';
-    });
+
 
     // Year
     document.getElementById('year').textContent = new Date().getFullYear();
