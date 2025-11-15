@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Philo Wang</title>
-  <meta name="description" content="Portfolio website with projects, publications, news, and contact." />
+  <meta name="description" content="Portfolio website of Philo Wang with projects, publications, news, and contact." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -112,28 +112,27 @@
     .news { margin-bottom: 1rem }
     .news time { font-weight: 600 }
 
-
     /* Social */
-      .socials { 
-    display:flex; 
-    gap:.8rem; 
-    margin-top:.8rem; 
-    font-size:1.4rem 
-  }
-  .socials a { 
-    color: var(--text); 
-    opacity:0.8 
-  }
-  .socials a:hover { 
-    opacity:1; 
-    color:var(--brand) 
-  }
+    .socials { 
+      display:flex; 
+      gap:.8rem; 
+      margin-top:.8rem; 
+      font-size:1.4rem 
+    }
+    .socials a { 
+      color: var(--text); 
+      opacity:0.8 
+    }
+    .socials a:hover { 
+      opacity:1; 
+      color:var(--brand) 
+    }
 
-  @media (max-width: 720px) {
-    .socials { justify-content:center }
-  }
+    @media (max-width: 720px) {
+      .socials { justify-content:center }
+    }
 
-  footer { padding: 2.2rem 0 3rem; color: var(--muted); text-align:center }
+    footer { padding: 2.2rem 0 3rem; color: var(--muted); text-align:center }
   </style>
 </head>
 <body>
@@ -159,27 +158,31 @@
       <div class="avatar" title="Profile photo"></div>
       <div>
         <h1>Philo Wang</h1>
-        <p class="subtitle">Doctoral student • AI agents • HCI • Educational Games</p>
+        <p class="subtitle">Doctoral student · AI agents · HCI · Educational & Health Technologies</p>
         <p>
-        Hi, I’m interested in building adaptive agents that support people in seeking, learning, and integrating information. My experience includes developing agents in both educational and healthcare contexts.        </p>
+          I am a PhD student in Information Science at UIUC. I design and study AI-powered agents,
+          games, and interactive systems that support people in seeking, learning, and integrating
+          information. My work spans educational games, collaborative learning analytics, and
+          conversational agents for health and well-being.
+        </p>
         <div class="tags" aria-label="Expertise tags">
-          <span class="chip">Game Dev</span>
-          <span class="chip">Data Science</span>
-          <span class="chip">HCI</span>
           <span class="chip">AI Agents</span>
+          <span class="chip">Educational Games</span>
+          <span class="chip">HCI & Co-Design</span>
+          <span class="chip">Learning Analytics</span>
+          <span class="chip">Health & Well-being</span>
         </div>
         <div class="socials">
-  <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn">
-    <i class="fab fa-linkedin"></i>
-  </a>
-  <a href="https://github.com" target="_blank" aria-label="GitHub">
-    <i class="fab fa-github"></i>
-  </a>
-  <a href="mailto:philowang1999@gmail.com" aria-label="Email">
-    <i class="fas fa-envelope"></i>
-  </a>
-</div>
-
+          <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com" target="_blank" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="mailto:philowang1999@gmail.com" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
       </div>
     </section>
 
@@ -195,55 +198,74 @@
       </div>
 
       <div class="grid" id="projectGrid">
-        <!-- Card Template -->
+        <!-- Unveil -->
         <article class="card" data-tags="game hci" tabindex="0">
           <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1546443046-ed1ce6ffd1a9?q=80&w=1200&auto=format&fit=crop');"></div>
           <div class="content">
-            <h3>Unveil — Misinformation Mystery</h3>
-            <p>Web-based escape-room-style game that cultivates skepticism and source evaluation.</p>
+            <h3>Unveil — Misinformation Mystery Game</h3>
+            <p>
+              A Unity-based narrative puzzle game that helps players practice scientific reasoning
+              and misinformation awareness. Selected as a poster at the 2025 iSchool Research Showcase.
+            </p>
             <div class="tags-row">
               <span class="chip">Game</span>
               <span class="chip">HCI</span>
-              <span class="chip">JavaScript</span>
+              <span class="chip">Unity</span>
             </div>
           </div>
         </article>
 
-        <article class="card" data-tags="ml viz" tabindex="0">
-          <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1551280416-0d3fdc2a9132?q=80&w=1200&auto=format&fit=crop');"></div>
+        <!-- Uncode -->
+        <article class="card" data-tags="game hci ml" tabindex="0">
+          <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1200&auto=format&fit=crop');"></div>
           <div class="content">
-            <h3>DRBot — CBT + MI Chatbot</h3>
-            <p>LLM-powered agent for supportive dialogue and behavioral activation with explainable logs.</p>
+            <h3>Uncode — AI Literacy Narrative Game</h3>
+            <p>
+              An educational narrative game (on itch.io) that introduces everyday AI concepts
+              through exploration, branching Yarn dialogues, and puzzle-solving, backed by a
+              Firebase data pipeline for gameplay logging.
+            </p>
             <div class="tags-row">
-              <span class="chip">ML</span>
-              <span class="chip">XAI</span>
-              <span class="chip">Python</span>
+              <span class="chip">Game</span>
+              <span class="chip">HCI</span>
+              <span class="chip">Unity</span>
+              <span class="chip">Firebase</span>
             </div>
           </div>
         </article>
 
-        <article class="card" data-tags="hci viz" tabindex="0">
+        <!-- DRBot -->
+        <article class="card" data-tags="ml hci" tabindex="0">
           <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1526378722484-bd91ca387e72?q=80&w=1200&auto=format&fit=crop');"></div>
           <div class="content">
-            <h3>Museum iPad Guide</h3>
-            <p>Interactive guide and postcard generator to support memorable museum visits.</p>
+            <h3>DRBot — CBT + MI Chatbot for MS</h3>
+            <p>
+              A Llama-3-powered conversational agent for people with multiple sclerosis, integrating
+              CBT and motivational interviewing techniques on a HIPAA-compliant infrastructure, with
+              screening workflows and upcoming agent design.
+            </p>
+            <div class="tags-row">
+              <span class="chip">ML</span>
+              <span class="chip">Health</span>
+              <span class="chip">Conversational Agent</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- HoloOrbits Collaboration Analytics -->
+        <article class="card" data-tags="hci viz ml" tabindex="0">
+          <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1551280416-0d3fdc2a9132?q=80&w=1200&auto=format&fit=crop');"></div>
+          <div class="content">
+            <h3>HoloOrbits — Collaboration Log Analysis</h3>
+            <p>
+              Cross-version analysis of gameplay logs from a collaborative astronomy learning game,
+              modeling annotation behaviors, navigation patterns, and collaboration dynamics to
+              derive design implications for productive group work.
+            </p>
             <div class="tags-row">
               <span class="chip">HCI</span>
               <span class="chip">Viz</span>
-              <span class="chip">iOS</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="card" data-tags="game ml" tabindex="0">
-          <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1200&auto=format&fit=crop');"></div>
-          <div class="content">
-            <h3>Believable Agents in 2D Worlds</h3>
-            <p>Training agents to navigate like humans using spatial situation models and logs.</p>
-            <div class="tags-row">
-              <span class="chip">Game</span>
-              <span class="chip">ML</span>
-              <span class="chip">RL</span>
+              <span class="chip">Python/R</span>
             </div>
           </div>
         </article>
@@ -253,10 +275,36 @@
     <!-- PUBLICATIONS -->
     <section id="publications" class="reveal">
       <h2>Publications</h2>
+
       <article class="pub">
-        <div class="title">Navigating the Sky Together: Investigating Collaboration Dynamics through Annotation in an Immersive Learning Environment</div>
-        <div class="meta">Y Zhou, P Wang, J Kang (2024). Proceedings of the 17th International Conference on Educational Data Mining. </div>
-        <div class="meta"><a href="https://educationaldatamining.org/edm2024/proceedings/2024.EDM-posters.76/2024.EDM-posters.76.pdf">PDF</a> · <a href="https://educationaldatamining.org/edm2024/proceedings/2024.EDM-posters.76/2024.EDM-posters.76.bib">BibTeX</a></div>
+        <div class="title">
+          Navigating the Sky Together: Investigating Collaboration Dynamics through Annotation in an Immersive Learning Environment
+        </div>
+        <div class="meta">
+          Y. Zhou, <b>P. Wang</b>, &amp; J. Kang (2024). Proceedings of the 17th International Conference on Educational Data Mining (EDM), 707–713.
+        </div>
+        <div class="meta">
+          <a href="https://educationaldatamining.org/edm2024/proceedings/2024.EDM-posters.76/2024.EDM-posters.76.pdf" target="_blank">PDF</a> ·
+          <a href="https://educationaldatamining.org/edm2024/proceedings/2024.EDM-posters.76/2024.EDM-posters.76.bib" target="_blank">BibTeX</a>
+        </div>
+      </article>
+
+      <article class="pub">
+        <div class="title">
+          Unveil the Truth: Designing Story-Based Mystery Games for Misinformation Awareness Across the Lifespan
+        </div>
+        <div class="meta">
+          <b>P. Wang</b>, &amp; J. Chin (2024). iConference. Under review. (First author)
+        </div>
+      </article>
+
+      <article class="pub">
+        <div class="title">
+          From Feedback to Function: Human-Centered Design for Supporting Collaboration in STEM Simulations
+        </div>
+        <div class="meta">
+          J. Kang, C. Palaguachi, &amp; <b>P. Wang</b> (2024). Journal of Computer Assisted Learning. Under review.
+        </div>
       </article>
     </section>
 
@@ -264,13 +312,20 @@
     <section id="news" class="reveal">
       <h2>News</h2>
       <div class="timeline">
-        <div class="news"><time>Sep 2025</time> .</div>
-        <div class="news"><time>Aug 2025</time> .</div>
-        <div class="news"><time>Sep 2024</time> Start my journey as a phd student here at UIUC!</div>
+        <div class="news">
+          <time>2025</time> · Unveil selected as a poster at the iSchool Research Showcase.
+        </div>
+        <div class="news">
+          <time>2024</time> · Paper on immersive collaboration accepted to EDM 2024.
+        </div>
+        <div class="news">
+          <time>2024</time> · Joined the DRBot and MS Mentor projects on AI agents and support tools for people with MS.
+        </div>
+        <div class="news">
+          <time>Sep 2024</time> · Started my journey as a PhD student at UIUC iSchool.
+        </div>
       </div>
     </section>
-
-   
   </main>
 
   <footer>
@@ -319,8 +374,6 @@
         c.style.display = show ? 'flex' : 'none';
       });
     }));
-
-
 
     // Year
     document.getElementById('year').textContent = new Date().getFullYear();
