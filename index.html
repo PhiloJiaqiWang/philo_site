@@ -98,6 +98,12 @@
     .card p { margin:0 0 .6rem; color: var(--muted) }
     .card .tags-row { display:flex; flex-wrap:wrap; gap:.4rem }
     .card .chip { font-size: .75rem }
+    .card-link {
+  display: block;         /* 关键：保持 grid 布局 */
+  text-decoration: none; 
+  color: inherit;
+}
+
 
     @media (max-width: 1024px) { .card { grid-column: span 6 } }
     @media (max-width: 640px)  { .card { grid-column: span 12 } }
@@ -198,6 +204,9 @@
 
       <div class="grid" id="projectGrid">
         <!-- Unveil -->
+        <a href="https://philojiqiayang.github.io/unveil/" 
+   target="_blank" 
+   class="card-link">
         <article class="card" data-tags="game hci" tabindex="0">
           <div class="thumb" style="background-image:url('unveil.png?q=80&w=1200&auto=format&fit=crop');"></div>
           <div class="content">
